@@ -1,4 +1,7 @@
 # STOCKBIT (Bibit) React.JS Test
+Requirement
+- Node v12.x.x
+- Yarn (latest)
 
 1.  Logic Test (Anagram)  
     How to run :
@@ -10,6 +13,6 @@
     How to run:
     ```bash
     cd movies-app
-    npm install
+    yarn install
     npm start
     ```
