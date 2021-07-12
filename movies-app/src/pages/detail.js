@@ -1,7 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import useMovieDetail from '../hooks/useMovieDetail';
-import PosterImage from '../components/PosterImage';
 
 export default function MovieDetail() {
   const { imdbId } = useParams();
