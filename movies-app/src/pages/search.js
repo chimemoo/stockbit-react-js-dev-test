@@ -14,12 +14,12 @@ function App() {
   ));
 
   return (
-    <div>
+    <main>
       <div className="main">{renderMovieListItem}</div>
       {noData && <p style={{ textAlign: 'center' }}>Film tidak ditemukan</p>}
-      {loading && <p style={{ textAlign: 'center' }}>Loading...</p>}
+      {loading && <p className="loading">Loading...</p>}
       <PosterModal visible={visible} onClose={onClick} data={data} />
-    </div>
+    </main>
   );
 }
 

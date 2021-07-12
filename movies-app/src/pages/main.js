@@ -14,11 +14,11 @@ function Main() {
   ));
 
   return (
-    <div>
+    <main>
       <div className="main">{renderMovieListItem}</div>
-      {loading && <p style={{ textAlign: 'center' }}>Loading...</p>}
+      {loading && <p className="loading">Loading...</p>}
       <PosterModal visible={visible} data={data} onClose={() => onClick()} />
-    </div>
+    </main>
   );
 }
 

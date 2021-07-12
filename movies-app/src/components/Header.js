@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="header">
       <Link to="/">
-        <h1>Movie App</h1>
+        <h1 className="header-logo">MovieDB</h1>
       </Link>
       <Search />
     </header>

@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     <div>
-      <input placeholder="Cari film" onChange={handleChangeKeyword} role="search" />
+      <input className="search-input" placeholder="Cari film" onChange={handleChangeKeyword} role="search" />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import useMovieDetail from '../hooks/useMovieDetail';
+import PosterImage from '../components/PosterImage';
 
 export default function MovieDetail() {
   const { imdbId } = useParams();
@@ -33,11 +34,11 @@ export default function MovieDetail() {
 
   if (imdbId) {
     return (
-      <div>
+      <main className="main-movie-detail">
         {!loading && renderMovieDetail()}
         {noData && <p style={{ textAlign: 'center' }}>Film tidak ditemukan</p>}
-        {loading && <p>Loading...</p>}
-      </div>
+        {loading && <p className="loading">Loading...</p>}
+      </main>
     );
   }
   return <div />;

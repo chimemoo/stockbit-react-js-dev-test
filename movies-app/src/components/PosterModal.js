@@ -6,8 +6,7 @@ export default function PosterModal({ visible, data, onClose }) {
           <span className="close" onClick={() => onClose()}>
             &times;
           </span>
-          <br />
-          <img src={data.Poster} />
+          <img className="modal-poster-image" src={data.Poster} alt={data?.Title} title={data?.Title} />
         </div>
       </div>
     );
