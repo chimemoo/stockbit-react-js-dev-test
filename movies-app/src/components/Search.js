@@ -21,6 +21,7 @@ export default function Header() {
   }, 1000);
 
   const makeBold = (item, keyword) => {
+    console.log('formant' + item);
     var re = new RegExp(keyword, 'g');
     return item.replace(re, '<i>' + keyword + '</i>');
   };
@@ -30,7 +31,7 @@ export default function Header() {
       to={`/movie/${data.imdbID}`}
       key={i}
       onClick={() => onSelect()}
-      dangerouslySetInnerHTML={{ __html: makeBold(data.Title, keyword) }}
+      dangerouslySetInnerHTML={{ __html: makeBold(data?.Title?.toLowerCase(), keyword.toLowerCase()) }}
     />
   ));
 
