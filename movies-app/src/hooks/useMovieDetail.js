@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import Actions from '../redux/actions';
+import * as Actions from '../redux/actions';
 
 const useMovieDetail = imdbId => {
   const [loading, setLoading] = useState(false);
@@ -13,10 +13,16 @@ const useMovieDetail = imdbId => {
     }
   }, []);
 
+  useEffect(() => {
+    if (imdbId) {
+      getMovieDetail();
+    }
+  }, [imdbId]);
+
   const getMovieDetail = () => {
     setLoading(true);
     dispatch(
-      Actions.getMovieDetail(
+      Actions.Movie.getMovieDetail(
         { imdbId },
         res => {
           setLoading(false);

@@ -1,3 +1,4 @@
 import * as Movie from './movie';
+import * as Search from './search';
 
-export default Movie;
+export { Movie, Search };

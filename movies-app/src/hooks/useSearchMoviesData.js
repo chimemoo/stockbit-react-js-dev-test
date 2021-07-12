@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
-import Actions from '../redux/actions';
+import * as Actions from '../redux/actions';
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -15,7 +15,7 @@ const useSearchMoviesData = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    dispatch(Actions.resetSearchResult());
+    dispatch(Actions.Movie.resetSearchResult());
     getMoviesData(true);
     setPage(1);
   }, [query.get('keyword')]);
@@ -25,7 +25,7 @@ const useSearchMoviesData = () => {
     setNoData(false);
     const currentPage = newKeyword ? 1 : page + 1;
     dispatch(
-      Actions.getSearchMovieData(
+      Actions.Movie.getSearchMovieData(
         { page: currentPage, keyword: query.get('keyword') },
         res => {
           if (!newKeyword) {

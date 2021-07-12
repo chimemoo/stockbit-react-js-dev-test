@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import Actions from '../redux/actions';
+import * as Actions from '../redux/actions';
 
 const useMoviesData = () => {
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ const useMoviesData = () => {
     setLoading(true);
     setNoData(false);
     dispatch(
-      Actions.getMovieData(
+      Actions.Movie.getMovieData(
         { page, keyword: 'Batman' },
         res => {
           const newPage = page + 1;

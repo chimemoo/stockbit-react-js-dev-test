@@ -112,6 +112,29 @@ table {
   text-align: center;
 }
 
+.search-input-container {
+  position: relative;
+}
+
+.autocomplete {
+  z-index: 10;
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+}
+
+.autocomplete a {
+  display: block;
+  overflow: hidden;
+  padding: 5px;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.autocomplete a i {
+  font-weight: normal;
+}
+
 /* The Modal (background) */
 .modal {
   position: fixed; /* Stay in place */
